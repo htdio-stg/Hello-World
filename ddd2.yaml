@@ -1,2 +1,9 @@
 name: Monalisa Octocat
 email: octocat@howtodeploy.io.com
+dkdk:
+  jeden: true
+  dwa:
+    - kaza
+    - maza
+output:
+  strona: 123
