@@ -8,3 +8,10 @@ services:
     envVars:
     - key: PORT
       value: 53842
+    disk:
+      - name: data
+        mountPath: /app/data
+        sizeGB: 5 # optiona      
+      - name: config
+        mountPath: /app/config
+        sizeGB: 5 # optiona      
