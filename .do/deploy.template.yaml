@@ -3,7 +3,7 @@ spec:
   services:
   - name: web
     git:
-      repo_clone_url: https://github.com/Lasim/test-yaml
+      repo_clone_url: https://github.com/howtodeploy/Hello-World
       branch: main
     dockerfile_path: Dockerfile
     instance_count: 1
