@@ -10,5 +10,5 @@ services:
       value: 53842
     disk:
       name: data
-      mountPath: /app
+      mountPath: /app/disc-mount
       sizeGB: 1 # optiona
