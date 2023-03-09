@@ -1,0 +1,21 @@
+spec:
+  name: test-piotr-dockerfile
+  services:
+  - name: web
+    git:
+      repo_clone_url: https://github.com/Lasim/test-yaml
+      branch: main
+    dockerfile_path: Dockerfile
+    instance_count: 1
+    http_port: 53842
+    health_check:
+      port: 53842
+      http_path: '/'
+      initial_delay_seconds: 10
+    envs:
+    - key: GOKAPI_CONFIG_DIR
+      scope: RUN_AND_BUILD_TIME
+      value: '/app/disc-mount/config'
+    - key: GOKAPI_DATA_DIR
+      scope: RUN_AND_BUILD_TIME
+      value: '/app/disc-mount/data'
