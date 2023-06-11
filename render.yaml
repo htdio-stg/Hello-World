@@ -3,6 +3,7 @@ services:
   - type: web
     name: gokapi
     env: docker
+    plan: free
     numInstances: 1
     healthCheckPath: /
     envVars:
