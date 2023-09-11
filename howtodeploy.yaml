@@ -1,0 +1,17 @@
+name: surrealdb
+providers:
+  - render
+  - digitalocean
+//-y
+services:
+//
+  - type: docker
+    name: surrealdb
+    dockerfile:
+      - FROM surrealdb/surrealdb:latest
+    instance_count: 1
+    http_port: 8000
+    health_check:
+      port: 8000
+      http_path: /status
+      initial_delay_seconds: 10
