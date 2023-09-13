@@ -2,9 +2,7 @@ name: surrealdb
 providers:
   - render
   - digitalocean
-//-y
 services:
-//
   - type: docker
     name: surrealdb
     dockerfile:
