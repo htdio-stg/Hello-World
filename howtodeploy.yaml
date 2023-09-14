@@ -1,4 +1,4 @@
-name: surrealdb
+name:
 providers:
   - render
   - digitalocean
