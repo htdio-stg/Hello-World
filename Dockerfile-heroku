@@ -1,0 +1,5 @@
+FROM f0rc3/gokapi:latest
+RUN mkdir /app/disc-mount
+ENV PORT=8000
+ENV GOKAPI_CONFIG_DIR=/app/disc-mount/config
+ENV GOKAPI_DATA_DIR=/app/disc-mount/data
