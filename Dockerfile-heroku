@@ -1,2 +1,2 @@
-FROM surrealdb/surrealdb:latest
+FROM swaggerapi/swagger-ui
 ENV PORT=8000
