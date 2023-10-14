@@ -1,5 +1,6 @@
 {
   "name": "Node.js Sample",
   "repository": "https://github.com/howtodeploy/Hello-World",
+  "website": "https://www.howtodeploy.io/app/influxdb",
   "logo": "https://www.howtodeploy.io/favicon-64x64.webp"
 }
