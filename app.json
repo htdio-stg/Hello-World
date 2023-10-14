@@ -3,5 +3,10 @@
   "repository": "https://github.com/howtodeploy/Hello-World",
   "website": "https://www.howtodeploy.io/app/influxdb",
   "logo": "https://www.howtodeploy.io/favicon-64x64.webp",
-  "stack": "container"
+  "stack": "container",
+  "env": {
+    "PORT": {
+      "value": "8080"
+    }
+  },  
 }
