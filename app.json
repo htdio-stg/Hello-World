@@ -6,6 +6,7 @@
   "stack": "container",
   "env": {
     "PORT": {
+      "description": "The port to run.",
       "value": "8080"
     }
   }
