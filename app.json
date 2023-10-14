@@ -1,4 +1,5 @@
 {
   "name": "Node.js Sample",
-  "repository": "https://github.com/howtodeploy/Hello-World"
+  "repository": "https://github.com/howtodeploy/Hello-World",
+  "logo": "https://www.howtodeploy.io/favicon-64x64.webp"
 }
