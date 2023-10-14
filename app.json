@@ -5,7 +5,7 @@
   "logo": "https://www.howtodeploy.io/favicon-64x64.webp",
   "stack": "container",
   "env": {
-    "PORT": {
+    "$PORT": {
       "description": "The port to run.",
       "value": 8080
     }
