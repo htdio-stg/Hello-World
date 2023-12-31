@@ -1,4 +1,5 @@
 name: yolo
+logo: https://wallpapers.com/images/hd/funny-chihuahua-pictures-s3kabfqmmi9js6qq.jpg
 providers:
   - render
   - digitalocean
