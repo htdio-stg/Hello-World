@@ -6,7 +6,7 @@ services:
     image:
       url: docker.io/linkace/linkace:latest
     startCommand: ""
-    plan: free
+    plan: starter
     region: oregon
     envVars:
       - key: PORT
