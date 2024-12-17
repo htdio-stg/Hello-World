@@ -4,14 +4,14 @@ services:
     env: docker
     runtime: image
     image:
-      url: docker.io/linkace/linkace:latest
+      url: docker.io/ananthakumaran/paisa:latest
     startCommand: ""
     plan: starter
     region: oregon
     envVars:
       - key: PORT
-        value: "8080"
+        value: "7500"
     disk:
-      name: default-app-database-database-sqlite
-      mountPath: /app/database/database.sqlite
+      name: default-root-documents-paisa-
+      mountPath: /root/Documents/paisa/
       sizeGB: 10
