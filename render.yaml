@@ -1,19 +1,17 @@
 services:
-  # A Docker web service
-  - type: web
-    name: gokapi
+  - name: default
+    type: web
     env: docker
-    plan: starter
-    numInstances: 1
-    healthCheckPath: /
+    runtime: image
+    image:
+      url: docker.io/linkace/linkace:latest
+    startCommand: ""
+    plan: free
+    region: oregon
     envVars:
-    - key: PORT
-      value: 53842
-    - key: GOKAPI_CONFIG_DIR
-      value: '/app/disc-mount/config'
-    - key: GOKAPI_DATA_DIR
-      value: '/app/disc-mount/data'      
+      - key: PORT
+        value: "80"
     disk:
-      name: data
-      mountPath: '/app/disc-mount'
-      sizeGB: 1 # optiona
+      name: default-app-database-database-sqlite
+      mountPath: /app/database/database.sqlite
+      sizeGB: 10
