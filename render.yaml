@@ -1,6 +1,6 @@
 services:
   - name: db
-    type: web
+    type: pserv
     env: docker
     runtime: image
     image:
@@ -20,20 +20,4 @@ services:
     disk:
       name: db-var-lib-mysql
       mountPath: /var/lib/mysql
-      sizeGB: 10
-  - name: app
-    type: web
-    env: docker
-    runtime: image
-    image:
-      url: docker.io/linkace/linkace:simple
-    startCommand: ""
-    plan: starter
-    region: oregon
-    envVars:
-      - key: PORT
-        value: "80"
-    disk:
-      name: app-app--env
-      mountPath: /app/.env
       sizeGB: 10
