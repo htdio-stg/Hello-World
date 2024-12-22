@@ -34,6 +34,6 @@ services:
       - key: PORT
         value: "80"
     disk:
-      name: app-app--env
-      mountPath: /app/.env
+      name: app-app-storage-app-backups
+      mountPath: /app/storage/app/backups
       sizeGB: 10
