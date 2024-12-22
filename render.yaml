@@ -10,13 +10,13 @@ services:
     region: oregon
     envVars:
       - key: MYSQL_ROOT_PASSWORD
-        value: mysecretpassword
+        value: gpA75RPFhHcEA@mG
       - key: MYSQL_USER
-        value: myuser
+        value: oljuysjo
       - key: MYSQL_PASSWORD
-        value: mysecretpassword
+        value: dJ9Rb&m2#I*Guwkz
       - key: MYSQL_DATABASE
-        value: mydatabase
+        value: qesytyipbrqz
     disk:
       name: db-var-lib-mysql
       mountPath: /var/lib/mysql
@@ -34,6 +34,6 @@ services:
       - key: PORT
         value: "80"
     disk:
-      name: app
+      name: app-app-storage-app-backups
       mountPath: /app/storage/app/backups
       sizeGB: 10
