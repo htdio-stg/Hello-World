@@ -35,5 +35,5 @@ services:
         value: "80"
     disk:
       name: app
-      mountPath: /app/
+      mountPath: /app/storage/app/backups
       sizeGB: 10
