@@ -5,7 +5,6 @@ spec:
     - name: db
       engine: MYSQL
       version: "8"
-      production: false
       db_name: huzdladdkkdb
       db_user: huzgticx
   services:
