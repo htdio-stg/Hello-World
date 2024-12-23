@@ -2,26 +2,6 @@ spec:
   name: deploystack
   region: nyc
   services:
-    - name: db
-      image:
-        registry_type: DOCKER_HUB
-        registry: docker.io
-        repository: mariadb
-        tag: "11.2"
-      instance_count: 1
-      instance_size_slug: basic-xxs
-      run_command: mariadbd --character-set-server=utf8mb4 --collation-server=utf8mb4_bin
-      envs:
-        - key: MYSQL_ROOT_PASSWORD
-          value: V18glemteRWk%*#z
-        - key: MYSQL_USER
-          value: huzgticx
-        - key: MYSQL_PASSWORD
-          value: "%3Qh*YbLS^thVyH9"
-        - key: MYSQL_DATABASE
-          value: huzdladdkkdb
-      routes:
-        - path: /
     - name: app
       image:
         registry_type: DOCKER_HUB
@@ -34,4 +14,4 @@ spec:
       run_command: ""
       envs: []
       routes:
-        - path: /app
+        - path: /
