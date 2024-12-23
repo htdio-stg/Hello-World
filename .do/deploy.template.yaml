@@ -5,7 +5,7 @@ spec:
     - name: db
       image:
         registry_type: DOCKER_HUB
-        repository: docker.io/library/mariadb
+        repository: mariadb
         tag: "11.2"
       instance_count: 1
       instance_size_slug: basic-xxs
@@ -24,7 +24,7 @@ spec:
     - name: app
       image:
         registry_type: DOCKER_HUB
-        repository: docker.io/linkace/linkace
+        repository: linkace/linkace
         tag: simple
       http_port: 80
       instance_count: 1
