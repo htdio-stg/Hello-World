@@ -13,3 +13,7 @@ You can find the official GitHub repository of <APP_NAME> here: <GITHUB_LINK_ORI
 
 
 - [https://cloud.digitalocean.com/apps/new?repo=https://github.com/howtodeploy/Hello-World/tree/main](https://cloud.digitalocean.com/apps/new?repo=https://github.com/howtodeploy/Hello-World/tree/main)
+
+```bash
+https://cloud.digitalocean.com/apps/new?repo=https://github.com/howtodeploy/Hello-World/tree/main
+```
