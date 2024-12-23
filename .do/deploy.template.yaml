@@ -5,6 +5,7 @@ spec:
     - name: db
       engine: MYSQL
       production: true
+      cluster_name: linkace
       version: "8"
       db_name: huzdladdkkdb
       db_user: huzgticx
