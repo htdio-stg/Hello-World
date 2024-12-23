@@ -1,21 +1,35 @@
 spec:
-  name: test-piotr-dockerfile
+  name: deploystack
+  region: nyc
   services:
-  - name: web
-    git:
-      repo_clone_url: https://github.com/howtodeploy/Hello-World
-      branch: main
-    dockerfile_path: Dockerfile
-    instance_count: 1
-    http_port: 53842
-    health_check:
-      port: 53842
-      http_path: '/'
-      initial_delay_seconds: 10
-    envs:
-    - key: GOKAPI_CONFIG_DIR
-      scope: RUN_AND_BUILD_TIME
-      value: '/app/disc-mount/config'
-    - key: GOKAPI_DATA_DIR
-      scope: RUN_AND_BUILD_TIME
-      value: '/app/disc-mount/data'
+    - name: db
+      image:
+        registry_type: DOCKER_HUB
+        repository: docker.io/library/mariadb
+        tag: "11.2"
+      instance_count: 1
+      instance_size_slug: basic-xxs
+      run_command: mariadbd --character-set-server=utf8mb4 --collation-server=utf8mb4_bin
+      envs:
+        - key: MYSQL_ROOT_PASSWORD
+          value: V18glemteRWk%*#z
+        - key: MYSQL_USER
+          value: huzgticx
+        - key: MYSQL_PASSWORD
+          value: "%3Qh*YbLS^thVyH9"
+        - key: MYSQL_DATABASE
+          value: huzdladdkkdb
+      routes:
+        - path: /
+    - name: app
+      image:
+        registry_type: DOCKER_HUB
+        repository: docker.io/linkace/linkace
+        tag: simple
+      http_port: 80
+      instance_count: 1
+      instance_size_slug: basic-xxs
+      run_command: ""
+      envs: []
+      routes:
+        - path: /app
