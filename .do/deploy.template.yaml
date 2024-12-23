@@ -4,6 +4,7 @@ spec:
   databases:
     - name: db
       engine: MYSQL
+      production: true
       version: "8"
       db_name: huzdladdkkdb
       db_user: huzgticx
