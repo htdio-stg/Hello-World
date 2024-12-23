@@ -1,27 +1,14 @@
 spec:
   name: deploystack
   region: nyc
-  services:
+  databases:
     - name: db
-      image:
-        registry_type: DOCKER_HUB
-        registry: library
-        repository: mariadb
-        tag: "11.2"
-      instance_count: 1
-      instance_size_slug: basic-xxs
-      run_command: mariadbd --character-set-server=utf8mb4 --collation-server=utf8mb4_bin
-      envs:
-        - key: MYSQL_ROOT_PASSWORD
-          value: V18glemteRWk%*#z
-        - key: MYSQL_USER
-          value: huzgticx
-        - key: MYSQL_PASSWORD
-          value: "%3Qh*YbLS^thVyH9"
-        - key: MYSQL_DATABASE
-          value: huzdladdkkdb
-      routes:
-        - path: /
+      engine: MYSQL
+      version: "8"
+      production: false
+      db_name: huzdladdkkdb
+      db_user: huzgticx
+  services:
     - name: app
       image:
         registry_type: DOCKER_HUB
@@ -31,7 +18,5 @@ spec:
       http_port: 80
       instance_count: 1
       instance_size_slug: basic-xxs
-      run_command: ""
-      envs: []
       routes:
-        - path: /app
+        - path: /
