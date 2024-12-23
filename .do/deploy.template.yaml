@@ -20,6 +20,8 @@ spec:
           value: "%3Qh*YbLS^thVyH9"
         - key: MYSQL_DATABASE
           value: huzdladdkkdb
+      routes:
+        - path: /
     - name: app
       image:
         registry_type: DOCKER_HUB
@@ -31,3 +33,5 @@ spec:
       instance_size_slug: basic-xxs
       run_command: ""
       envs: []
+      routes:
+        - path: /app
