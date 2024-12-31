@@ -2,7 +2,7 @@ version: "3"
 
 services:
 
-  # --- MariaDB 
+  # --- MariaDB #
   db:
     image: docker.io/library/mariadb:11.2
     restart: unless-stopped
