@@ -1,32 +1,10 @@
 services:
-  - name: db
-    type: pserv
-    env: docker
-    runtime: image
-    image:
-      url: docker.io/library/mariadb:11.2
-    startCommand: mariadbd --character-set-server=utf8mb4 --collation-server=utf8mb4_bin
-    plan: starter
-    region: oregon
-    envVars:
-      - key: MYSQL_ROOT_PASSWORD
-        value: gpA75RPFhHcEA@mG
-      - key: MYSQL_USER
-        value: oljuysjo
-      - key: MYSQL_PASSWORD
-        value: dJ9Rb&m2#I*Guwkz
-      - key: MYSQL_DATABASE
-        value: qesytyipbrqz
-    disk:
-      name: db-var-lib-mysql
-      mountPath: /var/lib/mysql
-      sizeGB: 10
   - name: app
     type: web
     env: docker
     runtime: image
     image:
-      url: docker.io/linkace/linkace:simple
+      url: docker.io/linkace/linkace:latest
     startCommand: ""
     plan: starter
     region: oregon
